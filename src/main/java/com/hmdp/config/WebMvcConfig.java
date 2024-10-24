@@ -32,7 +32,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
                         "/shop/**",
                         "/shop-type/**",
                         "/upload/**",
-                        "/voucher/**"
+                        "/voucher/**",
+                        "/shop"
                 ).order(1); // 优先级默认都是0，值越大优先级越低
         // 添加刷新token的拦截器
         registry.addInterceptor(new RefreshTokenInterceptor(stringRedisTemplate)).addPathPatterns("/**").order(0);
